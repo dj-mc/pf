@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 600px;
+}
+
+.nav-link {
+  margin: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,25 +31,23 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
+  min-height: 100vh;
 
-.App-link {
-  color: #61dafb;
+  color: white;
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
