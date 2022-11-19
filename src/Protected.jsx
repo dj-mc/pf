@@ -1,15 +1,20 @@
-import { Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { UserContext } from "./App";
 
-import SignIn from "./SignIn";
-
-function use_auth() {
-  const user = { logged_in: true };
-  return user && user.logged_in;
+function useAuth() {
+  const { user } = useContext(UserContext);
+  return user && user.signed_in;
 }
 
 function Protected() {
-  const auth = use_auth();
-  return auth ? <Outlet /> : <SignIn />;
+  const location = useLocation();
+  const is_authorized = useAuth();
+  return is_authorized ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/" replace state={{ from: location }} />
+  );
 }
 
 export default Protected;

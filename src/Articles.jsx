@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-function Article() {
+function Articles() {
   const params = useParams();
   return (
     <>
@@ -9,4 +9,4 @@ function Article() {
   );
 }
 
-export default Article;
+export default Articles;

@@ -1,9 +1,11 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 
 import Account from "./Account";
-import Article from "./Article";
+import Articles from "./Articles";
+import Authorize from "./Authorize";
 import NotFound from "./NotFound";
 import Protected from "./Protected";
+
 import logo from "./logo.svg";
 
 function MyComponent() {
@@ -13,7 +15,7 @@ function MyComponent() {
 function Views() {
   return (
     <Routes>
-      <Route index element={<h1>Index</h1>} />
+      <Route index element={<Authorize />} />
       <Route path="/about" element={<h1>About</h1>} />
 
       <Route element={<Protected />}>
@@ -22,7 +24,7 @@ function Views() {
       </Route>
 
       <Route
-        path="/article"
+        path="/articles"
         element={
           <div>
             <hr></hr>
@@ -33,7 +35,7 @@ function Views() {
         }
       >
         <Route index element={<h1>Articles</h1>} />
-        <Route path=":id" element={<Article />} />
+        <Route path=":id" element={<Articles />} />
         <Route path="*" element={<p>Oops, no article found...</p>} />
       </Route>
 
