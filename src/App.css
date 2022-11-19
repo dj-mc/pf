@@ -20,17 +20,6 @@ nav {
   margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -41,6 +30,24 @@ nav {
   color: white;
   background-color: #282c34;
   font-size: calc(10px + 2vmin);
+}
+
+.auth-button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {

@@ -1,19 +1,14 @@
 import { useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function NotFound() {
-  const use_nav = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      use_nav("/home");
-    }, 1000);
-  }, [use_nav]);
-  return (
-    <p>
-      Page Not Found
-      {/* <Navigate to="/home" /> */}
-    </p>
-  );
+      navigate("/home");
+    }, 2500);
+  }, [navigate]);
+  return <p>Page Not Found</p>;
 }
 
 export default NotFound;

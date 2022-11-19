@@ -9,6 +9,6 @@ test("Renders <App />", () => {
       <App />
     </BrowserRouter>
   );
-  const linkElement = screen.getByText(/my app/i);
-  expect(linkElement).toBeInTheDocument();
+  const found_my_app = screen.getByText(/my app/i);
+  expect(found_my_app).toBeInTheDocument();
 });
